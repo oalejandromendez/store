@@ -1,0 +1,20 @@
+.star-rating {
+    display: inline-block;
+    font-size: 1rem;
+    color: #ffb400;
+}
+.star-rating-inner {
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ffc107;
+    margin-left: 5px;
+}
+.star-rating-inner::before {
+    content: "\2605\2605\2605\2605\2605";
+}
+
+.stars {
+    display: flex;
+    align-items: baseline;
+}

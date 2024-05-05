@@ -1,0 +1,10 @@
+.modal-users {
+    position: absolute;
+    inset: 190px;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+}
