@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { login } from '../fakeApi/providers/auth';
 import Swal, { SweetAlertIcon } from 'sweetalert2';
 import './Login.css';
+import { LoginUser } from '../interfaces/login';
 
 export const Login: React.FC = () => {
 
@@ -19,10 +20,10 @@ export const Login: React.FC = () => {
     navigate('/index');
   }
 
-  const initialValues: Login = { username: '', password: '' };
+  const initialValues: LoginUser = { username: '', password: '' };
 
-  const validate = (values: Login) => {
-    const errors: Partial<Login> = {};
+  const validate = (values: LoginUser) => {
+    const errors: Partial<LoginUser> = {};
     if (!values.username) {
       errors.username = 'El nombre de usuario es requerido';
     }
@@ -32,7 +33,7 @@ export const Login: React.FC = () => {
     return errors;
   };
 
-  const handleSubmit = async (values: Login, actions: FormikHelpers<Login>) => {
+  const handleSubmit = async (values: LoginUser, actions: FormikHelpers<LoginUser>) => {
     actions.setSubmitting(false);
     await login((error: any, response?: any) => {
       if (error) {

@@ -1,4 +1,4 @@
-interface Product {
+export interface ProductData {
     id          : number, 
     category    : string,
     description : string,
@@ -10,5 +10,3 @@ interface Product {
         rate    : number
     }
 }
-
-export {}

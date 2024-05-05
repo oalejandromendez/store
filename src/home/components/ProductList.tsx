@@ -1,4 +1,5 @@
 import { getAllProducts } from '../../fakeApi/providers/products';
+import { ProductData } from '../../interfaces/product';
 import { Product } from './Product';    
 import { useEffect, useState } from 'react'
 
@@ -21,7 +22,7 @@ export const ProductList: React.FC = () => {
             <hr />
             <div className="row rows-cols-1 row-cols-md-3 g-3">
                 {
-                    products.map( (product: Product) => (
+                    products.map( (product: ProductData) => (
                         <Product 
                             key={ product.id } 
                             { ...product }

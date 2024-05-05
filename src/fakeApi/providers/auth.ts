@@ -1,9 +1,10 @@
+import { LoginUser } from "../../interfaces/login";
 import { post } from "../../providers/axios"
 import config from "../config"
 
 const url = config.url;
 
-export const login = async (callback: (error: any, data?: any) => void, data: Login) => {
+export const login = async (callback: (error: any, data?: any) => void, data: LoginUser) => {
     try {
         await post((error: any, response?: any) => {
             if (error) {

@@ -51,6 +51,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-private-property-in-object": "^7.24.5",
     "@types/react-modal": "^3.16.3",
     "@types/react-table": "^7.7.20"
   }

@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import './Product.css';
+import { ProductData } from '../../interfaces/product';
 
-export const Product: React.FC<Product> = (product: Product) => {
+export const Product: React.FC<ProductData> = (product: ProductData) => {
     return (
         <div className="container mt-5">
             <div className="row">

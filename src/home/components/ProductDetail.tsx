@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { getProductById } from "../../fakeApi/providers/products";
 import './ProductDetail.css';
+import { ProductData } from "../../interfaces/product";
 
 export const ProductDetail: React.FC = () => {
 
@@ -12,23 +13,23 @@ export const ProductDetail: React.FC = () => {
         navigate(-1);
     }
 
-    const [product, setProduct] = useState<Product | null>(null);
+    const [product, setProduct] = useState<ProductData | null>(null);
 
     useEffect(() => {
-        fetchProduct();
-    }, []);
-
-    const fetchProduct = async () => {
-        try {
-            const product = await getProductById(id ?? "");
-            if (!product) {
-                return <Navigate to="/index" />
+        const getProduct = async () => {
+            try {
+                const product = await getProductById(id ?? "");
+                if (!product) {
+                    return <Navigate to="/index" />
+                }
+                setProduct(product);
+            } catch (error) {
+                console.error('Error fetching product details:', error);
             }
-            setProduct(product);
-        } catch (error) {
-            console.error('Error fetching product details:', error);
         }
-    }
+        getProduct();
+    }, [id]);
+
 
     const generateStarRating = (rating: number) => {
         const starsTotal = 5;
