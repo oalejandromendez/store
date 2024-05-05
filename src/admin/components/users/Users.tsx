@@ -94,7 +94,7 @@ export const Users: React.FC = () => {
       if (values.hasOwnProperty(key)) {
         const UserKey = key as UserKey;
         const value = values[UserKey];
-        if(action === 'new' && !value || (action === 'update' && UserKey !== 'password' && !value)) {
+        if( (action === 'new' && !value) || (action === 'update' && UserKey !== 'password' && !value) ) {
           errors[UserKey] = `Campo requerido`;
         }
       }

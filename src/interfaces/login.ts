@@ -3,3 +3,4 @@ interface Login {
     password: string;
 }
 
+export {}

@@ -16,8 +16,7 @@ export const ProductDetail: React.FC = () => {
 
     useEffect(() => {
         fetchProduct();
-    }, [id]);
-
+    }, []);
 
     const fetchProduct = async () => {
         try {
