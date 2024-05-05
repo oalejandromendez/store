@@ -7,7 +7,7 @@ El Proyecto fue construido con Create React App
 1. Clone el repositorio utilizando Git:
 
    ```bash
-   git clone https://github.com/tu_usuario/tu_proyecto.git
+   git clone https://github.com/oalejandromendez/store.git
 
 2. Vaya al directorio del proyecto e instale las depedendencias utilizando el comando:
 npm install
